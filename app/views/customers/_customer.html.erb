@@ -1,0 +1,14 @@
+<div class="col-sm-3">
+  <div class="card" style="width: 18rem;">
+    <% if customer.image.present? %>
+      <%= image_tag customer.image, :class => "card-img-top" %>
+    <%else %>
+      <%= image_tag asset_path('blank_profile.png'), :class => "card-img-top" %>
+    <% end %>
+    <div class="card-body">
+      <h5 class="card-title"><%= customer.fullName %></h5>
+      <p class="card-text"><%= customer.emailAddress %></p>
+      <p class="card-text"><%= customer.phoneNumber %></p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,8 @@
+<h1>Customers</h1>
+
+<div class="row">
+  <% @customers.each do |customer| %>
+  <%= render partial: 'customer',
+              object: customer %>
+  <% end %>
+</div>
